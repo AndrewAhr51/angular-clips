@@ -14,8 +14,11 @@ export class LoginComponent {
       Validators.email,
     ]),
     password: new FormControl('',[
-      Validators.required
+      Validators.required,
+      Validators.pattern(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm)
     ]),
 
   })
+
+  get formInfo() { return this.loginForm.controls; }
 }
