@@ -14,8 +14,10 @@ export class LoginComponent {
       Validators.email,
     ]),
     password: new FormControl('',[
-      Validators.required
+      Validators.required,
     ]),
 
   })
+
+  get formInfo() { return this.loginForm.controls; }
 }
