@@ -15,6 +15,7 @@ export class LoginComponent {
     ]),
     password: new FormControl('',[
       Validators.required,
+      Validators.pattern(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm)
     ]),
 
   })
